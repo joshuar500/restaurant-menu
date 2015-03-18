@@ -139,7 +139,7 @@ class webserverHandler(BaseHTTPRequestHandler):
                     restaurantIDPath = self.path.split("/")[2]
                     myRestaurantQuery = session.query(Restaurant).filter_by(id=restaurantIDPath).one()
 
-                    if myRestaurantQuery != []:                        
+                    if myRestaurantQuery != []:
                         session.delete(myRestaurantQuery)
                         session.commit()
 
